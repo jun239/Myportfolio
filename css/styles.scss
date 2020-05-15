@@ -1,0 +1,391 @@
+$cFormBorder: 2px solid #e0e0e0;
+$cFormBtn: #d8576f;
+$cFormBtnBorder: #d8576f;
+$cFooterBg: #242424;
+$cFooter: #6c757d;
+$cMainBg: #f8f9fa;
+
+html {
+  font-size: 62.5%;
+}
+body {
+  img {
+    max-width: 100%;
+  }
+}
+// 右の余白を削除
+header, main, footer {
+  width:100%;
+  overflow:hidden;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+// ハンバーガーメニュー
+#nav-drawer {
+  position: relative;
+  text-align: right;
+  padding-right: 2rem;
+}
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+
+/*閉じる用の薄黒箇所*/
+#nav-close {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 6rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+/*メニューの中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 6rem;
+  left: 0;
+  z-index: 9999;
+  width: 90%;
+  max-width: 60%;/*最大幅（お好みで調整を）*/
+  height: 100%;
+  background: #fff;
+  transition: .3s ease-in-out;
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
+  .nav-contents {
+    text-align: left;
+    li {
+      font-size: 1.5rem;
+      padding: 1.5rem;
+      // border-top: 1px solid #4d4d4d;
+      // border-bottom: 1px solid #1a1a1a;
+      &:first-child {
+        padding-top: 3rem;
+      }
+    }
+    a {
+      color: #555;
+      text-decoration: none;
+    }
+  }
+}
+
+/*チェックがついたら表示させる*/
+#nav-input:checked ~ #nav-close {
+  display: block;
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  // box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+.header-logo-menu{
+ display: flex;
+ display: -moz-flex;
+ display: -o-flex;
+ display: -webkit-flex;
+ display: -ms-flex;
+ flex-direction: row;
+ -moz-flex-direction: row;
+ -o-flex-direction: row;
+ -webkit-flex-direction: row;
+ -ms-flex-direction: row;
+}
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  vertical-align: middle;
+}
+// ハンガーガーメニューここまで
+
+// スマホsetting-start
+header {
+  .row {
+    z-index: 10;
+    position: fixed;
+    background: #fff;
+    height: 6rem;
+    width: 100%;
+    .col {
+      margin: auto 0;
+      padding-left: 3rem;
+    }
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+// textStyle-start
+.textStyel1 {
+}
+// textStyle-end
+// buttonStyle-start
+.buttonStyel1 {
+}
+// buttonStyle-end
+
+.header-area {
+  margin-top: 6rem;
+  height: 41rem;
+  background: url("../img/headerImage01.jpg") no-repeat 0 0/cover;
+}
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.69);
+  position: absolute;
+  top: 6rem;
+  right: 0;
+  width: 100%;
+  height: 41rem;
+}
+
+main {
+  h1 {
+    padding: 2rem 0;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+/* about me-start */
+#aboutMe {
+  margin-top: 10rem;
+  position: relative;
+}
+#profileBgImage {
+  padding: 0.4rem;
+  border: 1px solid #dee2e6;
+  border-radius: 3px;
+  opacity: .8;
+}
+// #profileImage {
+//   width: 50%;
+//   height: 50%;
+//   border-radius: 50%;
+//   position: absolute;
+//   top: 16px;
+//   left: 75px;
+//   border: 3px solid #fff;
+// }
+/* about me-end */
+
+/* Web Skills-start */
+#webSkills {
+  padding-top: 5rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5rem;
+  text-align: center;
+  background: $cMainBg;
+}
+.webSkills {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 5rem;
+  max-width: 100%;
+  background: $cMainBg;
+}
+.skillBox {
+  width: 100%;
+  border: 1px solid#eee;
+  padding: 2rem;
+  margin: 2rem 0;
+  .fa-file-code {
+    color: $cFormBtn;
+  }
+  h3 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 2rem 0 1rem 0;
+  }
+  hr {
+    margin: 0 auto;
+    border-top: 1px solid $cFormBtn;
+    width: 5rem;
+  }
+  p {
+    padding: 1.3rem 2rem 1rem 2rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: #6c757d;
+  }
+}
+/* Web Skills-end */
+
+/* Works-start */
+#works {
+  text-align: center;
+  margin: 5rem 0;
+}
+.work {
+  position: relative;
+  widows: 100%;
+  height: 25rem;
+  color: #fff;
+  text-align: left;
+  margin-bottom: 5rem;
+  border-radius: 3px;
+  .bg-black {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.69);
+    opacity: 0;
+    transition: .3s ease-in-out;
+    &:hover {
+      opacity: 1;
+      transition: .3s ease-in-out;
+    }
+  }
+  img {
+    max-height: 100%;
+    width: 100%;
+  }
+  .workText {
+    padding: 8rem 0 0 0;
+    height: 100%;
+    transition: all .5s;
+    hr {
+      border-top: 0;
+      width: 10rem;
+      margin-top: 0;
+      height: 3px;
+      background: #6c757d;
+      border-radius: 25px;
+    }
+    &:hover {
+      transform: translate(10%,0);
+    }
+  }
+  h3 {
+    font-size: 2.3rem;
+    opacity: .7;
+  }
+  p {
+    font-size: 3rem;
+  }
+}
+#workImage1 {
+  background: url("../img/headerImage01.jpg") no-repeat 0 0 /cover;
+}
+#workImage2 {
+  background: url("../img/headerImage02.jpg") no-repeat 0 0 /cover;
+}
+/* Works-end */
+
+/* Contact-start */
+#contact {
+  text-align: center;
+  margin-top: 5rem;
+}
+#name,#email,#msg,#subject {
+  border: $cFormBorder;
+  width: 100%;
+  border-radius: 3px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  outline: none;
+  &:focus {
+    border-color: #e65f78;
+  }
+}
+#sendBtn {
+  background: $cFormBtn;
+  border: $cFormBtnBorder;
+  color: #fff;
+  border-radius: 3px;
+  padding: 1.5rem 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 20rem;
+  outline: none;
+}
+/* Contact-end */
+
+/* footer-start */
+footer {
+  text-align: center;
+  margin-top: 8rem;
+  padding: 8rem 0;
+  color: $cFooter;
+  background: $cFooterBg;
+}
+.snsIcon {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(241, 241, 241, 0.08);
+  border-radius: 50%;
+  .fa-facebook-f {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+  }
+  .fa-twitter {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+  }
+  a {
+    display: block;
+    color: $cFooter;
+    width: 100%;
+    height: 100%;
+  }
+}
+.copyRight {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+/* footer-end */
+
+/* トップへ戻るボタン-start */
+#pagetop {
+  position: fixed;
+  bottom: 6%;
+  left: 86%;
+  width: 30px;
+  transition: all 300ms 0s ease;
+}
+.invisible {
+  transition: 0.6s;
+  visibility: hidden;
+  opacity: 0;
+}
+.unInvisible {
+  visibility: visible;
+  opacity: 1;
+}
+/* トップへ戻るボタン-end */
+
+// スマホsetting-end

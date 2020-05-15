@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+
+  <!-- fontawesome -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>MyPortfolio</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <!-- header -->
+    <header>
+      <div class="row">
+        <div class="col">
+          <h1>Portfolio</h1>
+        </div>
+
+        <div class="col">
+          <!-- ハンガーガーメニュー -->
+          <div id="nav-drawer">
+            <input id="nav-input" type="checkbox" class="nav-unshown">
+            <label id="nav-open" for="nav-input">
+              <i class="fas fa-bars fa-3x"></i>
+            </label>
+            <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+            <div id="nav-content">
+              <ul class="nav-contents">
+                <li><a href="#aboutMe">AboutMe_自己紹介</a></li>
+                <li><a href="#webSkills">Web Skills_スキル</a></li>
+                <li><a href="#works">Works_実績</a></li>
+                <li><a href="#contact">Contact_お問い合わせ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-overlay"></div>
+      <div class="header-area">
+        <h2>title</h2>
+      </div>
+  </div>
+  </header>
+
+  <!-- main -->
+  <main>
+
+    <div class="container">
+      <!-- about me -->
+      <div id="aboutMe" class="aboutMe">
+        <img id="profileBgImage" src="./img/headerImage02.jpg" alt="プロフィール背景画像">
+
+        <h1><span>About</span> Me</h1>
+        <h2>名前：半谷純平</h2>
+        <p>
+          ここにテキスト
+        </p>
+
+        <!-- SNSボタン -->
+        <div class="row snsBtn">
+          <div class="col">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container webSkills">
+      <!-- Web Skills -->
+      <div id="webSkills">
+        <h1>Web <span>Skills</span></h1>
+
+        <p>スキル一覧</p>
+
+        <!-- skill-1 -->
+        <div class="skillBox">
+          <i class="far fa-file-code fa-5x"></i>
+          <h3>HTML5/CSS3</h3>
+          <hr>
+          <p>
+            ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文
+          </p>
+        </div><!-- skill-1 -->
+
+        <!-- skill-2 -->
+        <div class="skillBox">
+          <i class="far fa-file-code fa-5x"></i>
+          <h3>HTML5/CSS3</h3>
+          <hr>
+          <p>
+            ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文ここに説明文
+          </p>
+        </div><!-- skill-2 -->
+
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Works -->
+      <div id="works">
+        <h1>Works</h1>
+
+        <!-- work1 -->
+        <div id="workImage1" class="work">
+          <div class="bg-black">
+            <div class="workText">
+              <h3>模写作品</h3>
+              <hr>
+              <p>東急リバブル</p>
+            </div>
+          </div>
+        </div><!-- work1 -->
+
+        <!-- work2 -->
+        <div id="workImage2" class="work">
+          <div class="bg-black">
+            <div class="workText">
+              <h3>模写作品</h3>
+              <hr>
+              <p>zen place Yoga</p>
+            </div>
+          </div>
+        </div><!-- work2 -->
+
+      </div><!-- Works -->
+
+      <!-- Contact -->
+      <div id="contact">
+        <h1>Contact</h1>
+        <form action="./mail.php" method="POST">
+          <!-- 名前 -->
+          <p><input id="name" name="entry.2005620554" type="text" placeholder="Your Name*"></p>
+
+          <!-- メールアドレス -->
+          <p><input id="email" name="to" type="email" placeholder="Your Email*"></p>
+
+          <!-- 題名 -->
+          <p><input id="subject" name="title" type="text" placeholder="Your Subject.."></p>
+
+          <!-- メッセージ -->
+          <p><textarea id="msg" name="content" cols="30" rows="7" placeholder="Your message..."></textarea></p>
+
+          <!-- 送信ボタン -->
+          <input id="sendBtn" type="submit" value="SEND MESSAGE">
+        </form>
+
+      </div>
+    </div>
+
+  </main>
+
+  <div class="container-fluid">
+    <!-- footer -->
+    <footer>
+      <i id="pagetop" class="fas fa-chevron-circle-up fa-3x invisible"></i>
+
+      <!-- SNS -->
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <div class="snsIcon">
+            <a href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="snsIcon">
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <p class="copyRight">
+        ©2020/Junpei Hangai/All Right Reserved
+      </p>
+    </footer>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

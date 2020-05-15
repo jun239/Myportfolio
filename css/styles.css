@@ -1,0 +1,406 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+body img {
+  max-width: 100%;
+}
+
+header, main, footer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#nav-drawer {
+  position: relative;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display: none;
+}
+
+/*閉じる用の薄黒箇所*/
+#nav-close {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 6rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+/*メニューの中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 6rem;
+  left: 0;
+  z-index: 9999;
+  width: 90%;
+  max-width: 60%;
+  /*最大幅（お好みで調整を）*/
+  height: 100%;
+  background: #fff;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
+}
+
+#nav-content .nav-contents {
+  text-align: left;
+}
+
+#nav-content .nav-contents li {
+  font-size: 1.5rem;
+  padding: 1.5rem;
+}
+
+#nav-content .nav-contents li:first-child {
+  padding-top: 3rem;
+}
+
+#nav-content .nav-contents a {
+  color: #555;
+  text-decoration: none;
+}
+
+/*チェックがついたら表示させる*/
+#nav-input:checked ~ #nav-close {
+  display: block;
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+.header-logo-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -moz-flex;
+  display: -o-flex;
+  display: -ms-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  -ms-flex-direction: row;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header .row {
+  z-index: 10;
+  position: fixed;
+  background: #fff;
+  height: 6rem;
+  width: 100%;
+}
+
+header .row .col {
+  margin: auto 0;
+  padding-left: 3rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header-area {
+  margin-top: 6rem;
+  height: 41rem;
+  background: url("../img/headerImage01.jpg") no-repeat 0 0/cover;
+}
+
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.69);
+  position: absolute;
+  top: 6rem;
+  right: 0;
+  width: 100%;
+  height: 41rem;
+}
+
+main h1 {
+  padding: 2rem 0;
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+main h1 span {
+  font-weight: 700;
+}
+
+/* about me-start */
+#aboutMe {
+  margin-top: 10rem;
+  position: relative;
+}
+
+#profileBgImage {
+  padding: 0.4rem;
+  border: 1px solid #dee2e6;
+  border-radius: 3px;
+  opacity: .8;
+}
+
+/* about me-end */
+/* Web Skills-start */
+#webSkills {
+  padding-top: 5rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5rem;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.webSkills {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 5rem;
+  max-width: 100%;
+  background: #f8f9fa;
+}
+
+.skillBox {
+  width: 100%;
+  border: 1px solid #eee;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.skillBox .fa-file-code {
+  color: #d8576f;
+}
+
+.skillBox h3 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 2rem 0 1rem 0;
+}
+
+.skillBox hr {
+  margin: 0 auto;
+  border-top: 1px solid #d8576f;
+  width: 5rem;
+}
+
+.skillBox p {
+  padding: 1.3rem 2rem 1rem 2rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #6c757d;
+}
+
+/* Web Skills-end */
+/* Works-start */
+#works {
+  text-align: center;
+  margin: 5rem 0;
+}
+
+.work {
+  position: relative;
+  widows: 100%;
+  height: 25rem;
+  color: #fff;
+  text-align: left;
+  margin-bottom: 5rem;
+  border-radius: 3px;
+}
+
+.work .bg-black {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.69);
+  opacity: 0;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.work .bg-black:hover {
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.work img {
+  max-height: 100%;
+  width: 100%;
+}
+
+.work .workText {
+  padding: 8rem 0 0 0;
+  height: 100%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.work .workText hr {
+  border-top: 0;
+  width: 10rem;
+  margin-top: 0;
+  height: 3px;
+  background: #6c757d;
+  border-radius: 25px;
+}
+
+.work .workText:hover {
+  -webkit-transform: translate(10%, 0);
+          transform: translate(10%, 0);
+}
+
+.work h3 {
+  font-size: 2.3rem;
+  opacity: .7;
+}
+
+.work p {
+  font-size: 3rem;
+}
+
+#workImage1 {
+  background: url("../img/headerImage01.jpg") no-repeat 0 0/cover;
+}
+
+#workImage2 {
+  background: url("../img/headerImage02.jpg") no-repeat 0 0/cover;
+}
+
+/* Works-end */
+/* Contact-start */
+#contact {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+#name, #email, #msg, #subject {
+  border: 2px solid #e0e0e0;
+  width: 100%;
+  border-radius: 3px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+#name:focus, #email:focus, #msg:focus, #subject:focus {
+  border-color: #e65f78;
+}
+
+#sendBtn {
+  background: #d8576f;
+  border: #d8576f;
+  color: #fff;
+  border-radius: 3px;
+  padding: 1.5rem 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 20rem;
+  outline: none;
+}
+
+/* Contact-end */
+/* footer-start */
+footer {
+  text-align: center;
+  margin-top: 8rem;
+  padding: 8rem 0;
+  color: #6c757d;
+  background: #242424;
+}
+
+.snsIcon {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(241, 241, 241, 0.08);
+  border-radius: 50%;
+}
+
+.snsIcon .fa-facebook-f {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+
+.snsIcon .fa-twitter {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+}
+
+.snsIcon a {
+  display: block;
+  color: #6c757d;
+  width: 100%;
+  height: 100%;
+}
+
+.copyRight {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+/* footer-end */
+/* トップへ戻るボタン-start */
+#pagetop {
+  position: fixed;
+  bottom: 6%;
+  left: 86%;
+  width: 30px;
+  -webkit-transition: all 300ms 0s ease;
+  transition: all 300ms 0s ease;
+}
+
+.invisible {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.unInvisible {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* トップへ戻るボタン-end */
+/*# sourceMappingURL=styles.css.map */
